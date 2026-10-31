@@ -8,9 +8,10 @@ class MovieListing extends StatefulWidget {
   @override
   State<MovieListing> createState() => _MovieListingState();
 }
-String _bookingMessage = '';
+
 class _MovieListingState extends State<MovieListing> {
   int _ticketQuantity = 1;
+  String _bookingMessage = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,10 +31,14 @@ class _MovieListingState extends State<MovieListing> {
               ElevatedButton(
               onPressed: () {
                 print('Add to order button pressed');
+                setState(() {
+                  _bookingMessage = 'Movie added to order!';
+                });
               },
               child: const Text('Add to order'),
             ),
-               DropdownMenu<int>(
+             Text(_bookingMessage),
+             DropdownMenu<int>(
                 initialSelection: _ticketQuantity,
                 onSelected: (int? value) {
                   if (value != null) {
