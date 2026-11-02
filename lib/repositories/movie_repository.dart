@@ -5,13 +5,22 @@ class MovieRepository{
     return[
       Movie(
         id: "1",
-        title: "Dracula",
+        title: "Dracula 2025",
         synopsis: "When a 15th-century prince denounces God after the loss of his wife he inherits an eternal curse: he becomes Dracula.",
         ageRating: "18+",
         screeningTime: "2 hours 9 minutes",
         ticketPrice: 15.99,
         imagePath: "assets/images/dracula.jpg"
+      ),
+      Movie(
+        id: "2",
+        title: "Dragon ball Z: battle of gods",
+        synopsis: "When a 15th-century prince denounces God after the loss of his wife he inherits an eternal curse: he becomes Dracula.",
+        ageRating: "18+",
+        screeningTime: "2 hours 9 minutes",
+        ticketPrice: 15.99,
+        imagePath: "assets/images/dbz.jpg"
       )
     ];
   }
-  }
+}
