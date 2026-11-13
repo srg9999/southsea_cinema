@@ -15,7 +15,7 @@ class MovieRepository{
       Movie(
         id: "2",
         title: "Dragon ball Z: battle of gods",
-        synopsis: "When a 15th-century prince denounces God after the loss of his wife he inherits an eternal curse: he becomes Dracula.",
+        synopsis: "beerus wakes up from a long slumber to challenge the strongest warrior in the universe, Goku, to a battle that will determine the fate of the world. ",
         ageRating: "18+",
         screeningTime: "2 hours 9 minutes",
         ticketPrice: 15.99,
