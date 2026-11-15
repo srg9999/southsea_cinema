@@ -4,23 +4,32 @@ class MovieRepository{
   List<Movie> getMovies(){
     return[
       Movie(
-        id: "1",
-        title: "Dracula 2025",
-        synopsis: "When a 15th-century prince denounces God after the loss of his wife he inherits an eternal curse: he becomes Dracula.",
-        ageRating: "18+",
-        screeningTime: "2 hours 9 minutes",
-        ticketPrice: 15.99,
-        imagePath: "assets/images/dracula.jpg"
-      ),
+          id: "1",
+          title: "Dracula 2025",
+          synopsis: "When a 15th-century prince denounces God after the loss of his wife he inherits an eternal curse: he becomes Dracula.",
+          ageRating: "18+",
+          screeningTime: "2 hours 9 minutes",
+          ticketPrice: 15.99,
+          imagePath: "assets/images/dracula.jpg"
+        ),
       Movie(
-        id: "2",
-        title: "Dragon ball Z: battle of gods",
-        synopsis: "beerus wakes up from a long slumber to challenge the strongest warrior in the universe, Goku, to a battle that will determine the fate of the world. ",
-        ageRating: "18+",
-        screeningTime: "2 hours 9 minutes",
-        ticketPrice: 9.99,
-        imagePath: "assets/images/dbz.jpg"
-      )
+          id: "2",
+          title: "Dragon ball Z: battle of gods",
+          synopsis: "beerus wakes up from a long slumber to challenge the strongest warrior in the universe, Goku, to a battle that will determine the fate of the world. ",
+          ageRating: "18+",
+          screeningTime: "2 hours 9 minutes",
+          ticketPrice: 9.99,
+          imagePath: "assets/images/dbz.jpg"
+        ),
     ];
+  }
+
+  Movie? getMovieById(String id) {
+    for (final movie in getMovies()) {
+      if (movie.id == id) {
+        return movie;
+      }
+    }
+    return null;
   }
 }
