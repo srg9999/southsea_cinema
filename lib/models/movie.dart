@@ -7,7 +7,6 @@ class Movie{
   final double ticketPrice;
   final String imagePath;
 
-
   Movie({
     required this.id,
     required this.title,
@@ -18,4 +17,5 @@ class Movie{
     required this.imagePath,
   });
 
+  String get formattedPrice => '£${ticketPrice.toStringAsFixed(2)}';
 }
