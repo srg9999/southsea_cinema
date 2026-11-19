@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:southsea_cinema/constants.dart';
+import 'package:southsea_cinema/models/movie.dart';
 import 'package:southsea_cinema/widgets/nav_drawer.dart';
 
 class MovieListing extends StatefulWidget {
-  const MovieListing({super.key});
+  final Movie movie;
+
+  const MovieListing({super.key, required this.movie});
 
   @override
   State<MovieListing> createState() => _MovieListingState();
@@ -27,7 +30,17 @@ class _MovieListingState extends State<MovieListing> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text("Dracula"),
+              Text('${widget.movie.title} (${widget.movie.ageRating})',
+                  style: cinemaHeaderStyle),
+              Image.asset(
+                widget.movie.imagePath,
+                width: 80.0,
+                height: 80.0,
+                fit: BoxFit.cover,
+              ),
+              Text(widget.movie.screeningTime),
+              Text(widget.movie.synopsis),
+              Text('Tickets (${widget.movie.formattedPrice} each)'),
               ElevatedButton(
                 onPressed: () {
                   debugPrint('Add to order button pressed');
