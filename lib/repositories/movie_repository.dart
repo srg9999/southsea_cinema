@@ -18,7 +18,7 @@ class MovieRepository {
           synopsis:
               "beerus wakes up from a long slumber to challenge the strongest warrior in the universe, Goku, to a battle that will determine the fate of the world. ",
           ageRating: "18+",
-          screeningTime: "2 hours 9 minutes",
+          screeningTime: "1 hour 25 minutes",
           ticketPrice: 9.99,
           imagePath: "assets/images/dbz.jpg"),
       Movie(
