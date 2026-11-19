@@ -4,14 +4,14 @@ import 'package:southsea_cinema/repositories/movie_repository.dart';
 
 void main() {
   group('MovieRepository unit tests', () {
-    test('getMovies returns two movies', () {
+    test('getMovies returns three movies', () {
       final MovieRepository repository = MovieRepository();
       final List<Movie> movies = repository.getMovies();
 
-      expect(movies.length, 2);
+      expect(movies.length, 3);
     });
 
-    test('getMovies contains valid Dracula and Dragon Ball Z movies', () {
+    test('getMovies contains the three movies', () {
       final MovieRepository repository = MovieRepository();
       final List<Movie> movies = repository.getMovies();
 
@@ -26,6 +26,12 @@ void main() {
       expect(dbz.title, 'Dragon ball Z: battle of gods');
       expect(dbz.ticketPrice, 9.99);
       expect(dbz.imagePath, isNotEmpty);
+
+      final Movie broly = movies[2];
+      expect(broly.id, '3');
+      expect(broly.title, 'Dragon ball super: broly');
+      expect(broly.ticketPrice, 8.50);
+      expect(broly.imagePath, isNotEmpty);
     });
 
     test('getMovieById returns matching movie when id exists', () {
